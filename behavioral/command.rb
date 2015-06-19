@@ -23,7 +23,7 @@ end
 # ConcreteCommand2
 class Beep
   def execute
-  	print "\a"
+    print "\a"
   end
 end
 
