@@ -137,6 +137,7 @@ puts html
 #=> <title>
 #=> My Title
 #=> </title>
+#=> </head>
 #=> <body>
 #=> My Body
 #=> </body>
