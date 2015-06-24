@@ -10,12 +10,9 @@ class Login
   def initialize(password)
     @pwd_from_db = password
   end
+
   def login(password)
-    if @pwd_from_db == password
-      true
-    else
-      false
-    end
+    @pwd_from_db == password
   end
 end
 
