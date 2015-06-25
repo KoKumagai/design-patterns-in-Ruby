@@ -33,13 +33,17 @@ end
 # ConcreteImplementor
 class BubbleSort < SortImplementor
   def sort
-    len = @array.length
-    (len - 1).times do
+    return @array if (len = @array.length) <= 1
+    
+    loop do
+      swapped = false
       (len - 1).times do |i|
         if @array[i] > @array[i + 1]
           @array[i + 1], @array[i] = @array[i], @array[i + 1]
+          swapped = true
         end
       end
+      break unless swapped
     end
     @array
   end
@@ -56,13 +60,13 @@ end
 
 
 ############### Usage ###############
-quick = SortTimer.new(QuickSort.new([5,2,3,7,1,9,4,10,8,6]))
+quick = SortTimer.new(QuickSort.new([*0..10].shuffle))
 quick.print_time
 #=> Start: 21:28:55
 #=> Sorted: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 #=> End: 21:28:55
 
-bubble = SortTimer.new(BubbleSort.new([5,2,3,7,1,9,4,10,8,6]))
+bubble = SortTimer.new(BubbleSort.new([*0..10].shuffle))
 bubble.print_time
 #=> Start: 21:28:55
 #=> Sorted: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
