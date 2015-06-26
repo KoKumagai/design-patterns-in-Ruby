@@ -18,6 +18,7 @@ end
 # ConcreteBuilder1
 class WhiskeyWithWater
   attr_accessor :whiskey, :water
+  
   def initialize(whiskey, water)
     @whiskey = whiskey
     @water = water
