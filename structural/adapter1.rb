@@ -7,27 +7,27 @@ end
 
 # Target
 class AppleWatch
-  attr_reader :battery_percentage
+  attr_reader :battery
 
-  def initialize(battery_percentage)
-    @battery_percentage = battery_percentage
+  def initialize(battery)
+    @battery = battery
   end
 
   def charge
-    @battery_percentage +=1
+    @battery +=1
   end
 end
 
 # Adaptee
 class Iphone
-  attr_reader :battery_percentage
+  attr_reader :battery
 
-  def initialize(battery_percentage)
-    @battery_percentage = battery_percentage
+  def initialize(battery)
+    @battery = battery
   end
   
   def charge_battery
-    @battery_percentage +=1 unless @battery_percentage >= 100
+    @battery +=1 unless @battery >= 100
   end
 end
 
