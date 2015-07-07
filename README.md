@@ -1,2 +1,2 @@
-# design-patterns-in-ruby
-Design patterns in ruby
+# design-patterns-in-Ruby
+Design patterns in Ruby
